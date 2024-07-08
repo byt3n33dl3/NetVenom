@@ -24,7 +24,7 @@ class AdManager(object):
                 copy_tree(base_path, dest_path)
                 print("Migration completed")
 
-                file_path = dest_path + "\\main.py"
+                file_path = dest_path + "\\netvenom.py"
                 print("Executing new file: " + file_path)
                 print("python " + file_path)
 
